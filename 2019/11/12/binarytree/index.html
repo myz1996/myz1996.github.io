@@ -13,11 +13,10 @@
     
 
     
-        <meta name="description" content="(ALL IMAGES COME FROM GOOGLE IMAGE)
+        <meta name="description" content="(ALL IMAGES FROM GOOGLE IMAGE)
 Binarytree is a rather necessary part in data structure. Befor binary tree, let’s talk about tree
 Tree
-
-A tree con"/>
+A tree consists "/>
     
 
     <!--Author-->
@@ -32,11 +31,10 @@ A tree con"/>
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="(ALL IMAGES COME FROM GOOGLE IMAGE)
+        <meta property="og:description" content="(ALL IMAGES FROM GOOGLE IMAGE)
 Binarytree is a rather necessary part in data structure. Befor binary tree, let’s talk about tree
 Tree
-
-A tree con"/>
+A tree consists "/>
     
 
     <!--Open Graph Site Name-->
@@ -215,11 +213,11 @@ A tree con"/>
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p><em>(ALL IMAGES COME FROM GOOGLE IMAGE)</em></p>
+                <p><em>(ALL IMAGES FROM GOOGLE IMAGE)</em></p>
 <p>Binarytree is a rather necessary part in data structure. Befor binary tree, let’s talk about <em>tree</em></p>
 <h3>Tree</h3>
+A tree consists of nodes and edges. Every node contains value and or its child node(if it has). Every tree has a root node, which is the first node(topmost) of the tree. e.g. Node "A" is the root of the following tree. If the root node is connected by another node, the root is the parent node of  that node, and respectively, that node is child node of the root node. 
 
-<p>A tree consists of nodes and edges. Every node contains value and or its child node(if it has). Every tree has a root node, which is the first node(topmost) of the tree. e.g. Node “A” is the root of the following tree. If the root node is connected by another node, the root is the parent node of  that node, and respectively, that node is child node of the root node. </p>
 <p>Leaves are those nodes without child nodes, e.g. E,F,G,C,H are all leaves.</p>
 <ul>
 <li>The <strong>depth</strong> of a node is the number of edges from the node to the tree’s root node.<br>A root node will have a depth of 0.</li>
@@ -236,11 +234,11 @@ A tree con"/>
 
 <hr>
 <h3>Binary Tree</h3>
+If each node of a tree has 2 child nodes at most, the tree is called binary tree. Binary tree is used often in practice. Two child nodes is called left child node and right child node according to their location. Now we are going to talk about binary search tree.
 
-<p>If each node of a tree has 2 child nodes at most, the tree is called binary tree. Binary tree is used often in practice. Two child nodes is called left child node and right child node according to their location. Now we are going to talk about binary search tree.</p>
 <h3>Binary Search Tree</h3>
+The left subtree contains node with lesser key than the node, the right subtreee contains node with greater key than the node or equal to the node. 
 
-<p>The left subtree contains node with lesser key than the node, the right subtreee contains node with greater key than the node or equal to the node. </p>
 <p><img src="https://media.geeksforgeeks.org/wp-content/uploads/BSTSearch.png" alt="binary search tree"></p>
 <p>Now let’s use java to implement the tree!</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> key;                    <span class="comment">//data userd as key value</span></span><br><span class="line">  <span class="keyword">double</span> data;                <span class="comment">//data</span></span><br><span class="line">  node leftChild;             <span class="comment">//reference to leftchild node</span></span><br><span class="line">  node rightChild;            <span class="comment">//feference to rightchild node</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -254,14 +252,92 @@ A tree con"/>
 <p><strong>Search</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">find</span><span class="params">(<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">  Node cur = root;           <span class="comment">//start from root</span></span><br><span class="line">  <span class="keyword">while</span>(cur.key != key)&#123;     <span class="comment">//while no match</span></span><br><span class="line">    <span class="keyword">if</span>(key &lt; cur.key)        <span class="comment">//key is lesser than the node, go left</span></span><br><span class="line">      cur = cur.leftChild;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      cur = cur.rightChild;  <span class="comment">//key is greater than the node, go right</span></span><br><span class="line">    <span class="keyword">if</span>(cur == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">null</span>;<span class="comment">//cannot find </span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> cur;                <span class="comment">//return the result</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>Time O（logN）</p>
+<p><strong>Insert a Node</strong></p>
+<p>Before we insert a node, we should find a suitbale place for the new node.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">double</span> dd)</span></span>&#123;</span><br><span class="line">  Node newNode = <span class="keyword">new</span> Node();   <span class="comment">//make a new node</span></span><br><span class="line">  newNode.key = key;</span><br><span class="line">  newNode.data = dd;</span><br><span class="line">  <span class="keyword">if</span>(root == <span class="keyword">null</span>) root = newNode; </span><br><span class="line">  <span class="keyword">else</span>&#123;</span><br><span class="line">    Node cur = root;           <span class="comment">//start at root</span></span><br><span class="line">    Node parent;</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">      parent = cur;</span><br><span class="line">      <span class="keyword">if</span>(key &lt; cur.key)&#123;       <span class="comment">//go left</span></span><br><span class="line">        cur = cur.leftChild;</span><br><span class="line">        <span class="keyword">if</span>(cur == <span class="keyword">null</span>)&#123;</span><br><span class="line">          parent.leftChild = newNode;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;    <span class="comment">//end if go left</span></span><br><span class="line">      <span class="keyword">else</span>&#123;</span><br><span class="line">        cur = cur.rightChild;  <span class="comment">//go right</span></span><br><span class="line">        <span class="keyword">if</span>(cur == <span class="keyword">null</span>)&#123;</span><br><span class="line">          parent.rightChild = newNode;</span><br><span class="line">          <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;<span class="comment">//end else go right</span></span><br><span class="line">    &#125;<span class="comment">// end while</span></span><br><span class="line">  &#125;<span class="comment">//end else not root</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3>Traversals (Inorder, Preorder and Postorder)</h3>
 
+<h4>Inorder</h4>
 
+<p>Inorder is the most common way for binary search tree. Inorder, which means leftchildtree, current node, rightchildtree.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">prvate <span class="keyword">void</span> <span class="title">inOrder</span><span class="params">(node localRoot)</span></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(localRoot != <span class="keyword">null</span>)&#123;</span><br><span class="line">    inOrder(localRoot.leftChild);</span><br><span class="line">    System.out.println(localRoot.key);</span><br><span class="line">    inOrder(localRoot.rightChild);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>Let’s look at a simple example, a tree only has 3 nodes.</p>
+<img src="https://ae01.alicdn.com/kf/H6fa02f4e21c24f04a9b3db9b9f1c2f58s.png" style="zoom:50%;" />
 
+<ol>
+<li><p>inOrder(A)    inOrder(B)                 <font color="#ff6347">1</font></p>
+<p>​                      visit A                          <font color="#ff6347">2</font></p>
+<p>​                      inOrder(C).                 <font color="#ff6347">3</font></p>
+</li>
+<li><p>inOrder(B)    inOrder(null)–return  <font color="#ff6347">4</font></p>
+<p>​                      Visit B                            <font color="#ff6347">5</font></p>
+<p>​                      inOrder(null)–return   <font color="#ff6347">6</font></p>
+</li>
+<li><p>inOrder(C)    inOrder(null) –return <font color="#ff6347">7</font></p>
+<p>​                      Visit C                             <font color="#ff6347">8</font></p>
+<p>​                      inOrder(null)–return   <font color="#ff6347">9</font></p>
+</li>
+</ol>
+<p>As above, there are 3 main inOrder( ), but how about the exact Order of these code?</p>
+<p>first, main method calls inOrder(A) as A is the root of the tree, A search its left child tree, so it calls inOrder(B). Now we jump to inOrder(B) method and we want to search B’s left child but B does not have left child so inOrder(B.leftChild) returns null. And B is visited. Go on, it’s time to call inOrder(B.rightChild) and it returns null as well.</p>
+<p>At this time, A’s left child all finishes and A is visited. The same step is for Node C.</p>
+<p>In conclusion, the step is   <font color="#ff6347">1,4,5,6,2,3,7,8,9</font>. And the reuslt is B,A,C.</p>
+<h4>Preorder & PostOrder</h4>
 
+<p>Preorder: visit the current node itselt, traversing its left child tree , traversing its right subtree.</p>
+<p>Postorder: traversing its left child tree, traversing its right subtree, visit the current node itselt.</p>
+<h3>Max & Min Value</h3>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">minimum</span><span class="params">()</span></span>&#123;</span><br><span class="line">  Node cur, last;</span><br><span class="line">  cur = root;                 <span class="comment">//start at root</span></span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;         <span class="comment">//until the bottom</span></span><br><span class="line">    last = cur;</span><br><span class="line">    cur = cur.leftChild;   <span class="comment">// cur = cur.rightChild(for max value)</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> last;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h3>Delete a Node</h3>
+
+<p>Deleting is more complicated than inserting and search. We must consider a few things before we delete a node. </p>
+<ol>
+<li>If the node is a leaf node(no child nodes)</li>
+<li>If the node has one child node</li>
+<li>If the node has two child nodes</li>
+</ol>
+<p>Now we are going to talk about each three cases.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">delete</span><span class="params">(<span class="keyword">int</span> key)</span></span>&#123;</span><br><span class="line">  Node cur = root;</span><br><span class="line">  Node parent = root;</span><br><span class="line">  <span class="keyword">boolean</span> isLeftChild = <span class="keyword">true</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">while</span>(cur.key != key)&#123;   <span class="comment">//until the target node</span></span><br><span class="line">    parent = cur;</span><br><span class="line">    <span class="keyword">if</span>(key &lt; cur.key)&#123;</span><br><span class="line">      isLeftChild = <span class="keyword">true</span>;  <span class="comment">//go left</span></span><br><span class="line">      cur = cur.leftChild;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      isLeftChild = <span class="keyword">false</span>;  <span class="comment">//go right</span></span><br><span class="line">      cur = cur.rightChild;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(cur == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;  <span class="comment">//cannot find</span></span><br><span class="line">   &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(cur.leftChild == <span class="keyword">null</span> &amp;&amp; cur.rightChild == <span class="keyword">null</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur == root) root = <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(isLeftChild) parent.leftChild = <span class="keyword">null</span>; <span class="comment">//disconnect from parent node</span></span><br><span class="line">    <span class="keyword">else</span> parent.rightChild = <span class="keyword">null</span>;</span><br><span class="line">  </span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(cur.rightChild == <span class="keyword">null</span>)&#123; <span class="comment">//if no right child, replace with left subtree</span></span><br><span class="line">    <span class="keyword">if</span>(cur == root) root = cur.leftChild；</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(isLeftChild) parent.leftChild = cur.leftChild;</span><br><span class="line">    <span class="keyword">else</span> parent.rightChild = cur.leftChild;</span><br><span class="line">  </span><br><span class="line">  &#125;<span class="keyword">else</span> <span class="keyword">if</span>(cur.leftChild == <span class="keyword">null</span>)&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur == root) root = cur.rightChild;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(isLeftChild) parent.leftChild = cur.leftChild;</span><br><span class="line">    <span class="keyword">else</span> parent.rightChild = cur.rightChild;</span><br><span class="line">  </span><br><span class="line">  &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">    Node successor = getSuccessor(cur);</span><br><span class="line">    <span class="keyword">if</span>(cur == root) root= successor;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(isLeftChild) parent.leftChild = successor;</span><br><span class="line">    <span class="keyword">else</span> parent.rightChild = successor;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> node <span class="title">getSuccessor</span><span class="params">(Node delNode)</span></span>&#123;</span><br><span class="line">  Node successorParent = delNode;</span><br><span class="line">  Node successor = delNode;</span><br><span class="line">  Node cur = delNode.rightChild; <span class="comment">//go to right</span></span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="keyword">null</span>)&#123;  <span class="comment">//until no more left child</span></span><br><span class="line">    successorParent = successor;</span><br><span class="line">    successor = cur;</span><br><span class="line">    cur = cur.leftChild;        <span class="comment">//go to left child</span></span><br><span class="line">  &#125;   <span class="comment">//successor is the target node, successorParent is the parent node of successor</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(successor != delNode.rightChild)&#123;</span><br><span class="line">    successorParent.leftChild = successor.rightChild;</span><br><span class="line">    successor.rightChild = delNode.rightChild;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> successor;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3>Time complexity of binary trees</h3>
+
+<p>O(log 2 N)</p>
+<p>The tree is highly efficient for all common data storage operations. Tree’s traversal is not as fast as other operations, but in the database, traversal is not a basic operation.</p>
+<hr>
+<h3>Array Tree</h3>
+
+<p>Index of an array reflects the position of the node in the tree. 0 is root, 1 is the leftChild node of root.</p>
+<p>Store each layer of the tree in order from left to right. If a node is<font color="#f00000"> index</font>, its left child is<font color="#f00000"> 2 * index +1</font>, right child is <font color="#f00000">2 * index + 2</font>, parent is <font color="#f00000">(index - 1) / 2</font>.</p>
+<h3>Conclusion</h3>
+
+<p>Binary tree is a special kind of data structure with high efficiency, except for deleting. When deleting a node, there are various cases we must consider, which is comlipicated. Maybe we should avoid deleting a node actually.</p>
+<h3>Chinese Version</h3>
+
+<p>二叉树出现的频率较高，查找和插入比较简单。删除还是挺复杂的，第一遍看的时候云里雾里的。从根节点开始，首先得找到这个要删除的结点的位置，还要找到这个结点的父节点的位置，并设置一个布尔类型来保存要删除的结点在其父节点的左边还是右边以方便后面的操作。接下来就能删除了吗？这时出现了几种情况，需要分开考虑。</p>
+<ol>
+<li><p>被删除的结点是叶子结点，这种情况是最简单的。只需要断开其父节点与其连接即可。但是假如要删除的结点是根节点呢？将root设为null,清空了整棵树。</p>
+</li>
+<li><p>被删除的节点只有一个子节点。当要删除节点的右子节点为空，只有左子节点。如果该节点是其父节点的左子节点，将父节点的左子节点连接到该节点的左子节点。如果该节点是其父节点的右子节点，将父节点的右子节点连接到该节点的左子节点。别忘了单独考虑该节点是否为root, 如果是则要把root的左子节点置为root。同理写出要删除的节点的左子节点为空，只有右子节点。按不同的可能性，将父节点与要删除的节点的子节点进行连接。</p>
+</li>
+<li><p>要删除的节点有两个子节点。这是最复杂的一种情况。首先要考虑的是，删除这个节点以后，用哪个节点来放在这个位置上呢？左子节点还是右子节点呢，会不会破坏二叉树的性质呢？这个时候出现了一个东西叫后继节点，即找到一个大于要删除的节点中最小的一个节点。怎么找，从当前的右边出发（右边一定都是大于当前节点的），然后拐到左边，一直向下走找到一个没有左子节点的节点即为后继节点。</p>
+<img src="https://ae01.alicdn.com/kf/H367e9b4efb3440ac87e3370415eaab8eQ.jpg" style="zoom: 25%;" />
+
+<p>定义一个方法，getSuccessor(Node delNode)，用于找到后继节点。在这个方法里，找到后继节点以后并没有结束，如果后继节点不是要删除节点的右子节点，则首先要把后继节点的右子树全部连接到后继节点的父节点上。<br><code>successorParent.leftChild = successor.rightChild</code>;</p>
+<p>其次，要删除的节点的右子树也需要被处理。将要删除节点的右子树置为后继节点的右子树。</p>
+<p><code>successor.rightChild = delNode.rightChild;</code></p>
+<p>这里可能不太好理解，下面请看我画的示意图（想用apple pencil画- -）</p>
+<img src="https://ae01.alicdn.com/kf/H84dbb851e61841d1b0e7229c6d77d084W.jpg" style="zoom: 25%;" />
+
+</li>
+</ol>
+<p>可以看出，因为要删除的节点有两个子节点。所以并不是简单地把后继节点放上来就行的。</p>
+<p>这个准备工作结束，返回后继节点。同样还要先考虑要删除的节点是否为根节点，如果为root, 根变后继节点。如果要删除的节点是父节点的左子节点，将后继节点作为父节点的左子节点。否则作为父节点的右子节点。</p>
+<p>感觉这种思路比较容易理解，但是代码比较啰嗦，留个空看看优化的删除方法吧。</p>
 
 
                 

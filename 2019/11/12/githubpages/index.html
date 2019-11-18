@@ -226,11 +226,10 @@ But what "/>
 <p>It is time to check if we have successfully install hexo：</p>
 <p><code>$ hexo s</code></p>
 <p>This instruction means we open the hexo service, open our browser and enter the address: localhost:4000. If you can see the following pictures, congratulations!</p>
-<p><img src="http://m.qpic.cn/psb?/V12BA2nM2BYzwt/FL.3r5aBV21CgBRiqANadgQnksVA2A3hN.iB5RjlcE4!/b/dL4AAAAAAAAA&bo=EguKAgAAAAADV.M!&rf=viewer_4" alt="homepage"></p>
+<p><img src="https://ae01.alicdn.com/kf/Heb57cca06629488db97b0aa9a6a308c7U.png" alt=""></p>
 <h3 id="3-Association"><a href="#3-Association" class="headerlink" title="3.Association"></a>3.Association</h3><p>Sign in your GitHub account and create a new repository. <font style="font-weight:bold;font-style:italic" color="#DC143C">Attention：the name of the repositoy must be  yourusername.github.io </font></p>
 <p>Here is the example, myz1996 is my username.</p>
-<img src="http://m.qpic.cn/psb?/V12BA2nM2BYzwt/Whano9SmaPKcs.dcOb7efyFmHpMFZTw.VCj0vc5czbk!/b/dDUBAAAAAAAA&amp;bo=egJ6AAAAAAADFzA!&amp;rf=viewer_4" alt="name" style="zoom:67%;" />
-
+<p><img src="https://ae01.alicdn.com/kf/Hd88ef57784584ca1b7b148aeafd2389fd.png" alt=""></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
 
 <p>Slide to the bottom and modify these lines according to your own username</p>
@@ -250,7 +249,7 @@ But what "/>
 <p><code>$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code></p>
 <p>Under .ssh folder we can see id_rsa and id_rsa.pub, this folder can be found in root. SSH is the content in id_rsa.pub, copy it. Go to GitHub, click settings, choose SSH keys and add SSH key. You can randomly enter the title, paste in key and click the button ‘add key’.</p>
 <p>The use of SSH is we do not need to enter GitHub’s username and password every time. It becomes quite easy for us to post!</p>
-<h3 id="4-Themes"><a href="#4-Themes" class="headerlink" title="4.Themes"></a>4.Themes</h3><p>Hexo provides many free themes! You can go to <a href="https://hexo.io/themes/index.html" target="_blank" rel="noopener">Hexo themes</a> to select your own. How to apply the new theme? First, cd “themes”, and git clone + the address of the new theme, take the following as an example:</p>
+<h3 id="5-Themes"><a href="#5-Themes" class="headerlink" title="5.Themes"></a>5.Themes</h3><p>Hexo provides many free themes! You can go to <a href="https://hexo.io/themes/index.html" target="_blank" rel="noopener">Hexo themes</a> to select your own. How to apply the new theme? First, cd “themes”, and git clone + the address of the new theme, take the following as an example:</p>
 <p><code>https://github.com/iTimeTraveler/hexo-theme-hiero.git</code> </p>
 <p>This is the theme i currently use. Hold on, we still have to do one step:</p>
 <p><code>$ vim _config.yml</code></p>
@@ -264,13 +263,13 @@ But what "/>
 <p><code>$ hexo generate</code>  equals to <code>$ hexo g</code></p>
 <p><code>$ hexo deploy</code>  equals to  <code>$ hexo d</code></p>
 <p>Well, we have completed totally!</p>
-<h3 id="5-Post"><a href="#5-Post" class="headerlink" title="5.Post"></a>5.Post</h3><p>How can we publish a post? It is really easy! Just cd blog and :</p>
+<h3 id="6-Post"><a href="#6-Post" class="headerlink" title="6.Post"></a>6.Post</h3><p>How can we publish a post? It is really easy! Just cd blog and :</p>
 <p><code>$ hexo new &quot;name of your article&quot;</code></p>
 <p>This will create a .md file under /blog/source/_posts, all posts will be stored here. We can use Markdown to edit theses files and after modification, we should remember that , clean, generate and deploy.</p>
 <p>One more thing, i encountered ond problem and the reason is that after ‘ : ‘ need <font style="font-weight:bold;font-style:italic" color="#DC143C">space!</font></p>
-<h3 id="6-Conclusion"><a href="#6-Conclusion" class="headerlink" title="6.Conclusion"></a>6.Conclusion</h3><p>GitHub pages is much easier than develop a whole website. We can purchase some domain name to bind with our GitHub. This is our own free blog, we can decide layout, contents and in the future, there will be still  something excellent to be explored!</p>
+<h3 id="7-Conclusion"><a href="#7-Conclusion" class="headerlink" title="7.Conclusion"></a>7.Conclusion</h3><p>GitHub pages is much easier than develop a whole website. We can purchase some domain name to bind with our GitHub. This is our own free blog, we can decide layout, contents and in the future, there will be still  something excellent to be explored!</p>
 <h3 id="Following-is-Chinese-Version"><a href="#Following-is-Chinese-Version" class="headerlink" title="Following is Chinese Version"></a>Following is Chinese Version</h3><p>一直很想做一个自己的网站，很认真地研究了阿里云，从购买域名到个人网站的备案，服务器虚拟主机的价格，到搜索了很多很多如何使用阿里云搭建个人网站。每一个步骤我都非常仔细地看过了，考虑过时间，精力以及目前的水平，还是决定暂时不做这个了。就在这时突然知道github静态博客，其实我自己做网站也无非就是做一个博客的形式，何不用这个呢？这是昨天晚上构建好的静态博客，既复习了终端操作，又学习了markdown, 突然还了解了一下ejs。及时的复盘真的很重要，本来是用OneNote和白纸复习的，我现在终于开始脱离了纸笔学习的惯性。</p>
-<p>回到这个博客的搭建，感觉步骤不多，但是无论再手把手的技术贴也不能完美包含我们所遇到的问题。不过这个内容对完全小白来说可能不太友好，我人生前20年也没用过终端进行操作。我的选择就是善用搜索引擎！</p>
+<p>回到这个博客的搭建，感觉步骤不多，但是无论再手把手的技术贴也不能完美包含我们所遇到的问题。但这个内容对完全小白来说可能不太友好。我的建议就是善用搜索引擎，几乎我们的问题都能被解决！</p>
 <p>下篇再见！</p>
 
 
