@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Insertion sort is another kind of simple sorting method.
+Starting from the second element of the array, each element in the array is inserted into the"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="yezhi miao"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="insertion-sort"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Insertion sort is another kind of simple sorting method.
+Starting from the second element of the array, each element in the array is inserted into the"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Yezhi Miao"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>insertion-sort - Yezhi Miao</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Yezhi Miao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="noopener">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>insertion-sort</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-11-18
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Algorithm/">#Algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Insertion sort is another kind of simple sorting method.</p>
+<p>Starting from the second element of the array, each element in the array is inserted into the sorted array in ascending or descending order.<br>In general, the first element of the array is used as the starting element, we can assume that the first element has been in order and the second element should be inserted in order. Since the array to be inserted is already sorted, just sort the insertion point insertion element from right to left (or from back to front), and so on, until the last array element is inserted into the array, the process is complete.</p>
+<p>e.g. {10,2,4,6,1,8}</p>
+<p>{2,10,4,6,1,8} swap 2 &amp; 10</p>
+<p>{2,4,10,6,1,8} swap 4 &amp; 10</p>
+<p>{2,4,10,6,1,8}</p>
+<p>{2,4,6,10,1,8} i = 3,j=3</p>
+<p>{2,4,6,10,1,8} j=2</p>
+<p>{2,4,6,10,1,8} j=1</p>
+<p>{2,4,6,1,10,8} i=4,j=4</p>
+<p>{2,4,1,6,10,8}j=3</p>
+<p>{2,1,4,6,10,8}j=2</p>
+<p>{1,2,4,6,10,8}j=1</p>
+<p>{1,2,4,6,8,10}i=5 j= 5</p>
+<p>{1,2,4,6,8,10} j=4</p>
+<p>{1,2,4,6,8,10}j=3</p>
+<p>{1,2,4,6,8,10}j=2</p>
+<p>{1,2,4,6,8,10}j=1</p>
+<h3>Implementation</h3>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &gt; <span class="number">0</span> &amp;&amp; array[j]&lt;array[j-<span class="number">1</span>];j--)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = array[j - <span class="number">1</span>];</span><br><span class="line">        array[j - <span class="number">1</span>] = array[j];</span><br><span class="line">        array[j] = temp;</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<img src="https://ae01.alicdn.com/kf/H3ba93fd11f65432bbb6ee5c7855b3855H.png" style="zoom: 33%;" />
+
+<hr>
+<h3>Time Complexity</h3>
+
+<p><font color="#f00000">Insertion sort uses 􏰁<em>N</em> <sup>2</sup><em>/</em>4 compares and 􏰁<em>N</em><sup> 2</sup><em>/</em>4 exchanges to sort a randomly ordered array of length <em>N</em> with distinct keys, on the average. The worst case is 􏰁<em>N</em> <sup>2</sup>/2 compares and 􏰁<em>N</em> <sup>2</sup>/2 exchanges and the best case is <em>N</em> - 1 compares and 0 exchanges. </font></p>
+<img src="https://ae01.alicdn.com/kf/He97106acb32f467297273b28f7c1b4ecz.png" style="zoom:25%;" />
+
+<p>If  an array has N x N elements, the best case for sorting is all elements below the diagonal should be swaped. For randomly ordered arrays, each item goes about halfway back, on the average. So the best case is that half of the entries below the diagonal.</p>
+<p>An <em>inversion</em> is a pair of entries that are out of order in the array. <em>Inversion Count</em> for an array indicates how far (or close) the array is from being sorted. If array is already sorted then inversion count is 0. If array is sorted in reverse order that inversion count is the maximum.<br>Formally speaking, two elements a[i] and a[j] form an inversion if a[i] &gt; a[j] and i &lt; j.</p>
+<p><strong>Example:</strong><br>The sequence 2, 4, 1, 3, 5 has three inversions (2, 1), (4, 1), (4, 3).</p>
+<p>In E-X-A-M-P-L-E, 11 inversions(E,A),(X,A),(X,A),(X,M),(X,P),(X,L),(X,E),(M,L),(M,E),(P,E),(L,E)</p>
+<p>If the number of inversions in an array is less than a constant multiple of the array size, we say that the array is <em>partially sorted</em>. Insertion sort is a rather efficient way for such arrays</p>
+<p><font color="#f00000">The number of exchanges used by insertion sort is equal to the number of inversions in the array, and the number of compares is at least equal to the number of inversions and at most equal to the number of inversions plus the array size minus 1.  </font></p>
+<p>*<em>Time Complexity: *</em>O(n*2)</p>
+<p><strong>Auxiliary Space:</strong> O(1)</p>
+<p><strong>Boundary Cases</strong>: Insertion sort takes maximum time to sort if elements are sorted in reverse order. And it takes minimum time (Order of n) when elements are already sorted.</p>
+<p><strong>Stable</strong></p>
+<hr>
+<h3>Binary Insertion Sort</h3>
+
+<p>In the previous process, we can find that it takes a lot of time to compare each pairs of array[j] &amp; array[j-1]. Is there any other ways to decrease time? Of course, if we use binary search to find a proper position for the element waiting in the line. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">binaryInsertion</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(array[i] &lt; array[i - <span class="number">1</span>])&#123;</span><br><span class="line">    	<span class="keyword">int</span> k = findByBinary(array, i);</span><br><span class="line">    	<span class="keyword">int</span> key = array[i];</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &gt; k;j--)</span><br><span class="line">        array[j] = array[j - <span class="number">1</span>];</span><br><span class="line">      array[k] = key;</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findByBinary</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> left = <span class="number">0</span>, right = i - <span class="number">1</span>;    <span class="comment">// right is the former index of waiting element</span></span><br><span class="line">  <span class="keyword">int</span> mid;</span><br><span class="line">  <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">    mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(a[i] &gt; a[mid]) left = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> right = mid - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Time Complexity:</strong> O(log<sub>2</sub>n)</p>
+<h3>Chinese Version:</h3>
+
+<p>在冒泡排序之后复习总结了一下插入排序。插入排序可以分为直接插入排序，二分插入排序以及稍微有些难理解的希尔排序。</p>
+<p>插入排序的思路是，将一组元素想象成未排序的和已经排序好的部分。要使这组元素全部有序，那么我们是不是应该把还没有序的部分一个一个插入到已经排好序的部分呢？可能有人就会问，我拿到一个全部随机全部无序的数组怎么办呢。按照国际惯例，把第一个元素当作已经被排好序的部分，一个元素可不就是被排好序了吗。接下来，从index = 1开始，一个一个把右边的元素与左边比较。</p>
+<p>直接插入排序有一种优化的思路就是二分插入排序。当未排序的元素需要插入到左边时，不如用二分法来一步到位找到需要插入的位置。而不是一个一个一个比较。然后内层循环设置j&gt;需要插入位置的index，将需要插入位置右边的数一个一个挪到右边。最后把空出来的坑填上array[j]。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2019 yezhi miao<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

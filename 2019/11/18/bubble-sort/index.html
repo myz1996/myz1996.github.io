@@ -13,6 +13,8 @@
     
 
     
+        <meta name="description" content="Bubble sort is the simplest sorting algorithm. One outer loop and one inner loop to compare and swap two adjacent elements. Every time, the outer loop"/>
+    
 
     <!--Author-->
     
@@ -21,10 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Yezhi Miao"/>
+        <meta property="og:title" content="Bubble sort"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Bubble sort is the simplest sorting algorithm. One outer loop and one inner loop to compare and swap two adjacent elements. Every time, the outer loop"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2019 - Yezhi Miao</title>
+    <title>Bubble sort - Yezhi Miao</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -153,127 +157,118 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2019</h1>
+                <div class="post-heading">
+                    <h1>Bubble sort</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-11-18
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Algorithm/">#Algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/11/18/insertion-sort/">
-        <h1 class="post-title archive">
-            insertion-sort
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-18
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/11/18/bubble-sort/">
-        <h1 class="post-title archive">
-            Bubble sort
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-18
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Bubble sort is the simplest sorting algorithm. One outer loop and one inner loop to compare and swap two adjacent elements. Every time, the outer loop completes, the biggest element will go to the end of the array.</p>
+<p>{8,9,14,3,2,1,5}</p>
+<p>First pass:</p>
+<p>{8,9,14,3,2,1,5}  8&lt;9, no need to swap</p>
+<p>{8,9,14,3,2,1,5} 9&lt;14, no need to swap</p>
+<p>{8,9,3,14,2,1,5}  14&gt;3, swap 14 &amp; 3</p>
+<p>{8,9,3,2,14,1,5} swap 2 &amp; 14</p>
+<p>{8,9,3,2,1,14,5} swap 1 &amp; 14</p>
+<p>{8,9,3,2,1,5,14} swap 5 &amp; 14</p>
+<p>So after the first pass, the biggest element 14 has been placed in the right place.</p>
+<p>Second Pass:</p>
+<p>{8,9,3,2,1,5,14} no need to swap</p>
+<p>{8,3,9,2,1,5,14} swap 3 &amp; 9</p>
+<p>{8,3,2,9,1,5,14} swap 2 &amp; 9</p>
+<p>{8,3,2,1,9,5,14} swap 1 &amp; 9</p>
+<p>{8,3,2,1,5,9,14} swap 5 &amp; 9</p>
+<p>After the second pass，the second largest element–9 has been placed in the right place.</p>
+<p>Third Pass:</p>
+<p>{3,8,2,1,5,9,14} swap 3 &amp; 8</p>
+<p>{3,2,8,1,5,9,14} swap 8 &amp; 2</p>
+<p>{3,2,1,8,5,9,14} swap 8 &amp; 1</p>
+<p>{3,2,1,5,8,9,14} swap 5 &amp; 8</p>
+<p>After the third pass，the third largest element–8 has been placed in the right place.</p>
+<p>Fourth Pass:</p>
+<p>{2,3,1,5,8,9,14} swap 2 &amp; 3</p>
+<p>{2,1,3,5,8,9,14} swap 1 &amp; 3</p>
+<p>{2,1,3,5,8,9,14} no need to swap</p>
+<p>After the fourth pass，the fourth largest element–5 has been placed in the right place.</p>
+<p>Fifth Pass:</p>
+<p>{1,2,3,5,8,9,14} swap 1 &amp; 2</p>
+<p>{1,2,3,5,8,9,14} no need to swap</p>
+<p>After the fifth pass，the fifth largest element–3 has been placed in the right place.</p>
+<p>Sixth Pass:</p>
+<p>{1,2,3,5,8,9,14} no need to swap</p>
+<p>All compare and swap are finished. And all elements are in their positions. Here is Java implementation:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(array.length == <span class="number">0</span>) <span class="keyword">return</span> array; <span class="comment">//consider corner cases</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; array.length - i - <span class="number">1</span>;j++)&#123;</span><br><span class="line">      <span class="keyword">if</span>(array[j] &gt; array[j + <span class="number">1</span>])&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = array[j];</span><br><span class="line">        array[j] = array[j + <span class="number">1</span>];</span><br><span class="line">        array[j + <span class="number">1</span>] = temp;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color="#f00000">!!! consider one more thing, why the boundary of inner loop is “j &lt; array.length - 1 - i”?</font></p>
+<p>Let’s go back to our previous example, we can see that after each element has been in its place, actually, we do not need to compare with that. </p>
+<p>So when i = 0,  inner loop will continue to j = 7- 0- 1 = 6;</p>
+<p>when i = 1, inner loop j = 7 - i -1 = 7-1-1 =5;</p>
+<p>…….</p>
+<p>so when i = 5,j = 7 - 5 - 1 = 1;</p>
+<p><strong>Worst and Average Case Time Complexity:</strong> O(n*n). Worst case occurs when array is reverse sorted.</p>
+<p><strong>Best Case Time Complexity:</strong> O(n). Best case occurs when array is already sorted.</p>
+<p><strong>Stable</strong></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/11/17/SQL-1/">
-        <h1 class="post-title archive">
-            SQL(1)
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-17
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/11/12/binarytree/">
-        <h1 class="post-title archive">
-            binarytree/二叉树
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/12/githubpages/">
-        <h1 class="post-title archive">
-            GitHub Pages + Hexo/Hexo搭建GitHub静态博客
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/12/basketball/">
-        <h1 class="post-title archive">
-            someday
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-12
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/11/MYZ-s-blog/">
-        <h1 class="post-title archive">
-            Java Basics
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-11
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
