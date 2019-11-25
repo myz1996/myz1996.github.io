@@ -24,7 +24,7 @@ Starting from the second element of the array, each element in the array is inse
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="insertion-sort"/>
+        <meta property="og:title" content="Insertion Sort"/>
     
 
     <!--Open Graph Description-->
@@ -57,7 +57,7 @@ Starting from the second element of the array, each element in the array is inse
 
     <!-- Title -->
     
-    <title>insertion-sort - Yezhi Miao</title>
+    <title>Insertion Sort - Yezhi Miao</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -167,7 +167,7 @@ Starting from the second element of the array, each element in the array is inse
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>insertion-sort</h1>
+                    <h1>Insertion Sort</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -228,15 +228,14 @@ Starting from the second element of the array, each element in the array is inse
 <p>{1,2,4,6,8,10}j=2</p>
 <p>{1,2,4,6,8,10}j=1</p>
 <h3>Implementation</h3>
-
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &gt; <span class="number">0</span> &amp;&amp; array[j]&lt;array[j-<span class="number">1</span>];j--)&#123;</span><br><span class="line">        <span class="keyword">int</span> temp = array[j - <span class="number">1</span>];</span><br><span class="line">        array[j - <span class="number">1</span>] = array[j];</span><br><span class="line">        array[j] = temp;</span><br><span class="line">     &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <img src="https://ae01.alicdn.com/kf/H3ba93fd11f65432bbb6ee5c7855b3855H.png" style="zoom: 33%;" />
 
 <hr>
 <h3>Time Complexity</h3>
+<font color="#f00000">Insertion sort uses 􏰁*N* <sup>2</sup>*/*4 compares and 􏰁*N*<sup> 2</sup>*/*4 exchanges to sort a randomly ordered array of length *N* with distinct keys, on the average. The worst case is 􏰁*N* <sup>2</sup>/2 compares and 􏰁*N* <sup>2</sup>/2 exchanges and the best case is *N* - 1 compares and 0 exchanges. </font>
 
-<p><font color="#f00000">Insertion sort uses 􏰁<em>N</em> <sup>2</sup><em>/</em>4 compares and 􏰁<em>N</em><sup> 2</sup><em>/</em>4 exchanges to sort a randomly ordered array of length <em>N</em> with distinct keys, on the average. The worst case is 􏰁<em>N</em> <sup>2</sup>/2 compares and 􏰁<em>N</em> <sup>2</sup>/2 exchanges and the best case is <em>N</em> - 1 compares and 0 exchanges. </font></p>
 <img src="https://ae01.alicdn.com/kf/He97106acb32f467297273b28f7c1b4ecz.png" style="zoom:25%;" />
 
 <p>If  an array has N x N elements, the best case for sorting is all elements below the diagonal should be swaped. For randomly ordered arrays, each item goes about halfway back, on the average. So the best case is that half of the entries below the diagonal.</p>
@@ -251,14 +250,14 @@ Starting from the second element of the array, each element in the array is inse
 <p><strong>Stable</strong></p>
 <hr>
 <h3>Binary Insertion Sort</h3>
+In the previous process, we can find that it takes a lot of time to compare each pairs of array[j] & array[j-1]. Is there any other ways to decrease time? Of course, if we use binary search to find a proper position for the element waiting in the line. 
 
-<p>In the previous process, we can find that it takes a lot of time to compare each pairs of array[j] &amp; array[j-1]. Is there any other ways to decrease time? Of course, if we use binary search to find a proper position for the element waiting in the line. </p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">binaryInsertion</span><span class="params">(<span class="keyword">int</span>[] array)</span></span>&#123;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; array.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>(array[i] &lt; array[i - <span class="number">1</span>])&#123;</span><br><span class="line">    	<span class="keyword">int</span> k = findByBinary(array, i);</span><br><span class="line">    	<span class="keyword">int</span> key = array[i];</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">int</span> j = i;j &gt; k;j--)</span><br><span class="line">        array[j] = array[j - <span class="number">1</span>];</span><br><span class="line">      array[k] = key;</span><br><span class="line">    &#125;</span><br><span class="line">   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findByBinary</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> left = <span class="number">0</span>, right = i - <span class="number">1</span>;    <span class="comment">// right is the former index of waiting element</span></span><br><span class="line">  <span class="keyword">int</span> mid;</span><br><span class="line">  <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">    mid = (left + right) / <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">if</span>(a[i] &gt; a[mid]) left = mid + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> right = mid - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> left;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>Time Complexity:</strong> O(log<sub>2</sub>n)</p>
 <h3>Chinese Version:</h3>
+在冒泡排序之后复习总结了一下插入排序。插入排序可以分为直接插入排序，二分插入排序以及稍微有些难理解的希尔排序。
 
-<p>在冒泡排序之后复习总结了一下插入排序。插入排序可以分为直接插入排序，二分插入排序以及稍微有些难理解的希尔排序。</p>
 <p>插入排序的思路是，将一组元素想象成未排序的和已经排序好的部分。要使这组元素全部有序，那么我们是不是应该把还没有序的部分一个一个插入到已经排好序的部分呢？可能有人就会问，我拿到一个全部随机全部无序的数组怎么办呢。按照国际惯例，把第一个元素当作已经被排好序的部分，一个元素可不就是被排好序了吗。接下来，从index = 1开始，一个一个把右边的元素与左边比较。</p>
 <p>直接插入排序有一种优化的思路就是二分插入排序。当未排序的元素需要插入到左边时，不如用二分法来一步到位找到需要插入的位置。而不是一个一个一个比较。然后内层循环设置j&gt;需要插入位置的index，将需要插入位置右边的数一个一个挪到右边。最后把空出来的坑填上array[j]。</p>
 
