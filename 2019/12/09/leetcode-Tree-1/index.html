@@ -13,6 +13,12 @@
     
 
     
+        <meta name="description" content="#257 Binary Tree Paths
+
+
+
+1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *  "/>
+    
 
     <!--Author-->
     
@@ -21,10 +27,16 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="Yezhi Miao"/>
+        <meta property="og:title" content="leetcode-Tree-1"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="#257 Binary Tree Paths
+
+
+
+1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *  "/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +44,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +63,7 @@
 
     <!-- Title -->
     
-    <title>Archives - Yezhi Miao</title>
+    <title>leetcode-Tree-1 - Yezhi Miao</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -153,168 +165,81 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>leetcode-Tree-1</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-12-09
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/12/09/leetcode-Tree-1/">
-        <h1 class="post-title archive">
-            leetcode-Tree-1
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-09
-    </p>
-</div>
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/12/07/undirected-graph/">
-        <h1 class="post-title archive">
-            Undirected Graph
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-07
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h4>#257 Binary Tree Paths</h4>
+
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9res5ij2tj30xw0og40n.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">binaryTreePaths</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root, list, <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode node, List&lt;String&gt; list, String s)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node  == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        s += Integer.toString(node.val);</span><br><span class="line">        <span class="keyword">if</span> (node.left != <span class="keyword">null</span> || node.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">            s += <span class="string">"-&gt;"</span>;</span><br><span class="line">            dfs (node.left, list, s);</span><br><span class="line">            dfs (node.right, list, s);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            list.add(s);</span><br><span class="line">        &#125;</span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>本题思路，从根结点一直往下走到底。那么首先应该考虑深度优先。需要注意的是，什么时候把String添加到list中呢，当访问到没有左子结点也没有右子结点的结点时。开始在if判断中，我写的是</p>
+<p><code>if (node.left 1= null &amp;&amp; node,right != null)</code></p>
+<p>这样就会错过很多路径，应该是只要左右子结点有一个不为空就可以继续向下挖掘。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/12/07/binary-search-tree/">
-        <h1 class="post-title archive">
-            Binary Search Tree
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-07
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-                <div class="post-preview">
-    <a href="/2019/12/04/balanced-search-trees/">
-        <h1 class="post-title archive">
-            Balanced Search Trees
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-12-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/25/leetcode-Array-2/">
-        <h1 class="post-title archive">
-            LeetCode Array(2)
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-25
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/21/ElasticSearch/">
-        <h1 class="post-title archive">
-            ElasticSearch
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-21
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/19/leetcode-Array-1/">
-        <h1 class="post-title archive">
-            leetcode-Array-1
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-19
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/18/insertion-sort/">
-        <h1 class="post-title archive">
-            Insertion Sort
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/18/bubble-sort/">
-        <h1 class="post-title archive">
-            Bubble Sort
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-18
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2019/11/17/SQL-1/">
-        <h1 class="post-title archive">
-            SQL(1)
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-17
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-        <li class="next"><a href="/archives/page/2/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />

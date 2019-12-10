@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="Balanced Search Trees
+
+This kind of data structure is guaranteed to be logarithmic.
+2-3 search trees
+
+为了保证树的平衡性，允许一个节点保存多个键。现在引入3结点的情况。
+原来的结点称为2结点，一个键"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="yezhi miao"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="Balanced Search Trees"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Balanced Search Trees
+
+This kind of data structure is guaranteed to be logarithmic.
+2-3 search trees
+
+为了保证树的平衡性，允许一个节点保存多个键。现在引入3结点的情况。
+原来的结点称为2结点，一个键"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Yezhi Miao"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>Balanced Search Trees - Yezhi Miao</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Yezhi Miao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="noopener">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>Balanced Search Trees</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-12-04
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/Algorithm/">#Algorithm</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2>Balanced Search Trees</h2>
+
+<p>This kind of data structure is guaranteed to be logarithmic.</p>
+<h3>2-3 search trees</h3>
+
+<p>为了保证树的平衡性，允许一个节点保存多个键。现在引入3结点的情况。</p>
+<p>原来的结点称为2结点，一个键及对应的值， 两条链接。左链接指向2-3树中的键都小于该结点，右链接指向的键都大于该结点。</p>
+<p>3结点：含有两个键及对应的值和三条链接，左链接指向的2-3树中的键都小于该结点，中链接指向的键都位于该结点的两个键之间。右链接指向的键都大于该结点。</p>
+<p>指向空树的链接称为空链接。</p>
+<p><strong>一棵完美平衡的2-3查找树中所有空链接到根结点的距离都应该是相通的。</strong></p>
+<h4>Search</h4>
+
+<p>要判断一个键是否在树中，先讲它和根结点的键比较。如果是空链接则查找失败，其余情况根据比较的结果继续向下走。</p>
+<h4>Inserting a node</h4>
+
+<p><strong>1.</strong></p>
+<p>直接插入可能无法保持树原来的平衡性，如果查找的结果位置在一个2结点，那么将其替换为3结点即可。</p>
+<p><strong>2.如果查找结果结束于一个3结点。</strong></p>
+<p>为了能将新键插入我们先临时将新键存入该结点中，使之成为一个4结点，3个键和4条链接。再将4结点转换为三个2结点。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9llvzjm4ij30cy09g75m.jpg" alt="向一棵只有3结点的树插入新键" style="zoom:50%;" />
+
+<p>现在这个小树是一个完美平衡的2-3树了，所有的空链接到根结点的距离相等，插入前高度为0，插入后高度为1。</p>
+<p><strong>3.向父结点是2结点的3结点插入新键</strong></p>
+<p>同样，先创造一个4结点，将原来父结点替换为一个新的3结点。这种变换是2-3树的动态变化的核心。此次变换仍然保持了树的有序与平衡。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9lmcz4udej30cy09g75m.jpg" alt="向一个父结点为2结点的3结点中插入新键" style="zoom:50%;" />
+
+<p><strong>4.向父结点为3-结点的3结点插入新键</strong></p>
+<p>再次构建一个临时4结点。想将中键插入父结点中，但很可惜父结点是个3结点。那么我们将这个中键构造一个新的4结点，在这个结点上进行相同的变换，分解这个父结点并将它的中键插入到它的父结点中。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9lmm1t01jj30g00s6tfs.jpg" style="zoom:50%;" />
+
+<p>即，一直向上分解临时的4结点直至遇上一个2结点并将它替换为一个不要分解的3结点或者是到达3结点的根。那么我们要怎么分解根结点呢？</p>
+<p><strong>分解根结点</strong></p>
+<p>从插入结点到根结点上全是3结点，根结点最终是一个临时4结点。那么只要把这个4结点分解为三个2结点即可。完美保持树的性质，树高加一。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9lmm1t01jj30g00s6tfs.jpg" style="zoom:50%;" />
+
+<p><strong>总结四结点拆解的六种情况</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9lmqyyjbij312y0egq8v.jpg" alt=""></p>
+<p><em>在一棵大小为N的2-3树中，查找和插入操作访问的结点必然不超过lgN个。</em></p>
+<p>在一个含有n个结点的2-3树的高度在log<sub>3</sub>N=lgN/lg3 和 lgN之间。</p>
+<p>分别为（全是3结点）（全是2结点）。</p>
+<hr>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9ln1n9vh1j30ts10qk1c.jpg" style="zoom:50%;" />
+
+<p>由此可见，就算按照升序连续插入，2-3树也不会是一个最差的二叉树，而是一个高度为2的树。</p>
+<p>因此，2-3树在最坏情况下性能也会很不错。每个操作中处理每个结点的时间都不会超过一个很小的常数。（10亿个结点的2-3树高度仅在19-30之间，最多只要访问30个结点就能够在10亿个键中进行任意查找和插入操作！惊了）</p>
+<p><br/><br/><br/></p>
+<h3>Red Black BST</h3>
+
+<p>红黑二叉树的基本思想是用标准的二叉查找树和别的信息来表示2-3树。由一条红色左链接相连的两个2结点表示一个3结点。黑链接则还是原来2-3树中的普通链接。</p>
+<p>红黑树的定义：</p>
+<ul>
+<li>红链接均为左链接</li>
+<li>没有任何一个结点同时和两条红链接相连</li>
+<li>该树是完美黑色平衡的，任意空链接到根结点的路径上的黑链接数量相同。</li>
+</ul>
+<p>满足这三个条件的二叉查找树和相应的2-3树就是对应的了。</p>
+<h4>颜色</h4>
+
+<p>每个结点都会有一个指向自己的链接，从父结点指向它。将链接的颜色保存在表示结点的Node的布尔变量color中。如果为红色，则为true，黑色则为false。空链接为黑。</p>
+<h4>旋转</h4>
+
+<p><em>左旋转：一条红色的右链接需要被转化为左链接</em></p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9loggc99mj30ek0nsjw6.jpg" style="zoom:50%;" />
+
+<p>比较旋转前后可以发现，小于E 大于S的区间的顺序并没有发生变换。只是将根结点变为S，即右边的结点了。</p>
+<p><em>右旋转</em>：改变left为right即可。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9logjh0kkj30eg0n2tcz.jpg" style="zoom:50%;" />
+
+
+
+<p>rotateLeft()和rotateRight()都能返回一条链接。</p>
+<p><strong>向2结点中插入新键</strong></p>
+<p>一棵只含有一个键的红黑树只有一个2-结点，插入另一个键之后我们马上就需要将他们旋转。如果新键小于老健，我们只需要新增一个红色的结点，新的红黑树和单个3-结点完全等价。</p>
+<p>如果新键大于老键，则会产生一条红色的右链接，此时需要 </p>
+<p><code>root =  rotateLeft(root);</code></p>
+<p>将其旋转为红色的左链接并修正根结点的链接。</p>
+<p><strong>向树底部的2-结点插入新键</strong></p>
+<p>插入新键将会在树的底部新增一个结点（保证有序性）。但总是用红链接和它的父结点相连。如果指向新结点的是父结点的左链接，父结点直接成为一个3-结点。如果指向新结点的是父结点的右链接，就需要旋转。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9m8s8b3b9j30by0gigns.jpg" style="zoom:50%;" />
+
+<p><strong>向一棵双键树（3-结点）中插入新键</strong></p>
+<ul>
+<li>新键大于原树中两个键，连接到3-结点的右链接。将两条红链接都由红变黑，就得到一个三个结点组成的高为2的平衡树。</li>
+<li>新键小于原树中两个键，则会产生连续的两个红链接。将上层的红链接右旋。</li>
+<li>新键介于两个键之间，将下层的红链接左旋。</li>
+</ul>
+<p>第二三种情况都要转换为第一种情况处理。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9m944fyvhj30ss0kstgo.jpg" style="zoom:50%;" />
+
+<p><strong>颜色转换</strong></p>
+<p>每次插入后都将根结点设为黑色。每当根结点由红变黑时树的黑链接高度就会加一。</p>
+<p>向树底部的3-结点加入一个新结点，如果指向新结点的是3-结点的右链接则转换颜色即可。指向的是左链接则先右旋再转换颜色。指向的是中链接则先须先旋转下层链接然后右旋上层链接，最后转换颜色。颜色转换会使到中结点的链接变红，相当于将它送入了父结点。相当于在父结点中插入一新键。</p>
+<p><strong>红黑树的插入</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> RED = <span class="keyword">true</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">boolean</span> BLACK = <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> clss Node&#123;</span><br><span class="line">  Key key;</span><br><span class="line">  Value val;</span><br><span class="line">  Node left, right;   <span class="comment">//左右子树</span></span><br><span class="line">  <span class="keyword">int</span> N;              <span class="comment">//这颗子树中的结点总数</span></span><br><span class="line">  <span class="keyword">boolean</span> color;       <span class="comment">//由父结点指向它的链接的颜色</span></span><br><span class="line">  </span><br><span class="line">  Node(Key key, Value val, <span class="keyword">int</span> N, <span class="keyword">boolean</span> color)&#123;</span><br><span class="line">    <span class="keyword">this</span>.key = key;</span><br><span class="line">    <span class="keyword">this</span>.val. = val;</span><br><span class="line">    <span class="keyword">this</span>.N = N;</span><br><span class="line">    <span class="keyword">this</span>.color = color;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isRed</span><span class="params">(Node x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">return</span> x.color == RED;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RedBlackBST</span>&lt;<span class="title">Key</span> <span class="keyword">extends</span> <span class="title">Comparable</span>&lt;<span class="title">Key</span>&gt;, <span class="title">Value</span>&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">private</span> Node root;</span><br><span class="line">  <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">isRed</span><span class="params">(Node h)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> Node <span class="title">rotateLeft</span><span class="params">(Node h)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> Node <span class="title">rotateRight</span><span class="params">(Node h)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">flipColors</span><span class="params">(Node h)</span></span>;</span><br><span class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Key key, Value val)</span></span>&#123;</span><br><span class="line">    root.put(root, key, val);</span><br><span class="line">    root.color = BLACK;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">private</span> Node <span class="title">put</span><span class="params">(Node h, Key key, Value val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(h == <span class="keyword">null</span>) <span class="keyword">return</span> <span class="keyword">new</span> Node(key, val, <span class="number">1</span>, RED);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">int</span> cmp = key.compareTo(h.key);</span><br><span class="line">    <span class="keyword">if</span>(cmp &lt; <span class="number">0</span>) h.left = put(h.left, key, val);</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(cmp &gt; <span class="number">0</span>) h.right = put(h.right, key, val);</span><br><span class="line">    <span class="keyword">else</span> h.val = val;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(isRed(h.right) &amp;&amp; !isRed(h.left)) h = rotateLeft(h);</span><br><span class="line">    <span class="keyword">if</span>(isRed(h.left) &amp;&amp; isRed(h.left.left)) h = rotateRight(h);</span><br><span class="line">    <span class="keyword">if</span>(isRed(h.left) &amp;&amp; isRed(h.right)) flipColors(h);</span><br><span class="line">    </span><br><span class="line">    h.N = size(h.left) + size(h.right) + <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">return</span> h;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h4>删除</h4>
+
+<p>先了解一下2-3-4树，它的插入算法沿查找路径向下进行变换是为了保证当前结点不是4结点。向上变换是为了将之前创建的4结点配平。</p>
+<p>在向下的过程中，如果遇到父结点为2-结点的4-结点，将4-结点分解为两个2-结点并将中键给他的父结点，使父结点变为一个3-结点。</p>
+<p>如果父结点为3-结点，将4-结点分解为两个2-结点并将中键给父结点。使父结点变为一个4-结点。不用担心会遇到父结点为4-结点的4-结点。</p>
+<ul>
+<li>将4-结点表示为由三个2-结点组成的一棵平衡的子树，根结点和两个子结点都用红链接相连。</li>
+<li>向下的过程中分解所有4-结点并进行颜色变换。</li>
+<li>向上的过程中用旋转将4-结点配平。</li>
+</ul>
+<p><strong>2-3树删除最小键</strong></p>
+<p>从树底部3-结点删除一个键很简单，但是2-结点删除会留下一个空结点，破坏树的完美平衡性。</p>
+<p>为了保证我们不会删除一个二结点，从左链接向下进行变换。确保当前结点不是2结点。根结点的情况：根为2-结点且两个子结点都为2-结点，将这三个结点变为4-结点。否则要保证根结点的左子结点不是2-结点。</p>
+<p>保证以下情况之一成立即可：</p>
+<ul>
+<li>当前结点左子结点不是2-结点</li>
+<li>当前结点左子结点是2-结点而它的亲兄弟结点不是2-结点，将左子结点的兄弟结点中一个键移动到左子结点中。</li>
+<li>当前结点的左子结点和它的亲兄弟结点都是2-结点，将左子结点、父结点中的最小键和左子结点最近的兄弟结点合并为一个4-结点。使父结点由3-结点变为2-结点或者由4-结点变为3-结点。</li>
+</ul>
+<p>在遍历的过程中执行这个过程，最后得到一个含有最小键的3-结点/4-结点。然后再回头向上分解所有临时的4-结点。</p>
+<img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9mbzu9xclj30gq0ni42n.jpg" style="zoom:50%;" />
+
+<h4>红黑树的性质</h4>
+
+<p><font color="#f00000"><em>一棵大小为N的红黑树的高度不会超过2lgN</em></font></p>
+<p><em>红黑树的最坏情况是它所对应的2-3树中构成最左边的路径结点全部都是3-结点而其余均为2结点。最左边的路径长度是只包含2-结点的路径长度（～lgN）的两倍。</em></p>
+<p><font color="#fooooo"><em>一棵大小为N的红黑树中，根结点到任意结点的平均路径长度为～1.00lgN</em></font></p>
+<p><font color="#fooooo"><em>一棵红黑树中，查找、插入、查找最小最大键、floor()、rank()、select()、删除最小最大键、删除、范围查询都是对数级别的。</em></font></p>
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9mcb1yziej313i0do44y.jpg" alt=""></p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2019 yezhi miao<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

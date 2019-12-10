@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!--Description-->
+
+    
+
+    
+        <meta name="description" content="#11 Container With Most Water
+
+
+
+12345678910111213class Solution &amp;#123;    public int maxArea(int[] height) &amp;#123;        int left = 0, right = height"/>
+    
+
+    <!--Author-->
+    
+        <meta name="author" content="yezhi miao"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="LeetCode Array(2)"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="#11 Container With Most Water
+
+
+
+12345678910111213class Solution &amp;#123;    public int maxArea(int[] height) &amp;#123;        int left = 0, right = height"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="Yezhi Miao"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="http://yoursite.comhttp://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg"/>
+    
+
+    <!-- Title -->
+    
+    <title>LeetCode Array(2) - Yezhi Miao</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+
+</head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Yezhi Miao</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank" rel="noopener">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>LeetCode Array(2)</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-11-25
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h2>#11 Container With Most Water</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9aocr7vfpj316w0u0q96.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = height.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">            <span class="keyword">int</span> a = (height[left] &lt; height[right]) ? height[left] : height[right];</span><br><span class="line">            max = (a * (right - left) &lt; max) ? max : (a * (right - left));</span><br><span class="line">            <span class="keyword">if</span>(height[left] &lt; height[right]) left++;</span><br><span class="line">            <span class="keyword">else</span> right--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Two pointers, one from 0, the other from right.</p>
+<p>这题我觉得难点在于想清楚，如何让指针移动。最大的面积有两种情况，长度最长即在一头一尾，或者底比较短但是高度很高。</p>
+<p>我们开始把两个指针放在两边就是默认从第一种情况开始。然后根据木桶理论取短边的高度计算面积。当左边高度小于右边的高度时，左指针++找寻下一个可能的更高的。否则右指针👈移动一个。</p>
+<h2>#15 3Sum</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9apaphsvaj30wy0n0ack.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; threeSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(nums.length &lt;<span class="number">3</span> || nums == <span class="keyword">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length - <span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> left = i + <span class="number">1</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(i != <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] == <span class="number">0</span>)&#123;</span><br><span class="line">                    <span class="comment">// List&lt;Integer&gt; list = new ArrayList&lt;&gt;();</span></span><br><span class="line">                    <span class="comment">// list.add(nums[i]);</span></span><br><span class="line">                    <span class="comment">// list.add(nums[left]);</span></span><br><span class="line">                    <span class="comment">// list.add(nums[right]);</span></span><br><span class="line">                    <span class="comment">// res.add(list);</span></span><br><span class="line">                    res.add(Arrays.asList(<span class="keyword">new</span> Integer[]&#123;nums[i], nums[left], nums[right]&#125;));</span><br><span class="line">                <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[left] == nums[left + <span class="number">1</span>]) left++;</span><br><span class="line">                <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[right] == nums[right - <span class="number">1</span>]) right--;</span><br><span class="line">                left++;</span><br><span class="line">                right--;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nums[i] + nums[left] + nums[right] &lt; <span class="number">0</span>) left++;</span><br><span class="line">                <span class="keyword">else</span> right--;</span><br><span class="line">                    </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>res.add(Arrays.asList(new Integer[]{nums[i], nums[left], nums[right]}));</code></p>
+<p>学习一下简便的写法。这题要注意的是去重，去重 = sort + </p>
+<p><code>if(i != 0 &amp;&amp; nums[i] == nums[i - 1]) continue;</code></p>
+<p>定义两个指针，从头扫到倒数第二个，然后在i的右边通过两个指针寻找组合。在找到一个组合以后，还要注意的是，分别移动两个指针到不重复的地方。否则会有相同的解集出现。然后再正常各移动一个位置。</p>
+<p>如果当前三个数不符合条件，则根据情况移动指针。</p>
+<p><font color="#f00000">3sum我觉得是一道十分经典的题目了，融合了双指针和去重。并且和下面的4su m有很强的联系。需要多练习！</font></p>
+<h2>#16 3Sum Closest</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9aqp0z5hlj30we0f2q5d.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">threeSumClosest</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(nums.length &lt; <span class="number">3</span> || nums == <span class="keyword">null</span>) <span class="keyword">return</span> Integer.MAX_VALUE;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> res = nums[<span class="number">0</span>] + nums[<span class="number">1</span>] + nums[nums.length - <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">int</span> max = Math.abs(res - target);</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.length - <span class="number">2</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i != <span class="number">0</span> &amp;&amp; nums[i] == nums[i -<span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">int</span> left = i + <span class="number">1</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">                <span class="keyword">int</span> sum = nums[i] + nums[left] + nums[right];</span><br><span class="line">                <span class="keyword">int</span> a = Math.abs(sum - target);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span>(sum == target) <span class="keyword">return</span> target;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(a &lt; max)&#123;</span><br><span class="line">                    max = a;</span><br><span class="line">                    res = sum;</span><br><span class="line">                    <span class="comment">//while(left &lt; right &amp;&amp; nums[left] == nums[left + 1]) left++;</span></span><br><span class="line">                    <span class="comment">//while(left &lt; right &amp;&amp; nums[right] == nums[right - 1]) right--;</span></span><br><span class="line">                    <span class="comment">//if(sum &gt; target) right--;</span></span><br><span class="line">                    <span class="comment">//else left++;</span></span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(sum &gt; target)&#123;</span><br><span class="line">                    right--;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    left++;</span><br><span class="line">                &#125;</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这题虽然思路很简单，只要绝对值更小就进行更新替换。但是在实施的过程中，一是忘记了如果直接等于目标值，直接返回。而是这里与3sum不同的是，不需要两个while去寻找下个不同的元素。因为其实相同的值是可以被使用的。和上一题不一样的是，我们这里要找的是个最大值，而不是解法，那么最大值一定是有唯一性的。</p>
+<p>另外与上一题不一样的是，上一题在找到一种解法以后，两个指针同时移动。这里不可以，因为只要不等于target，就会比target小或者大。也就是说只能移动一个指针。</p>
+<p><font color="#f00000">想法和实现都很难啊！！！</font></p>
+<h2>#18 4Sum</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9at39me9yj30wi0oyq60.jpg" style="zoom:33%;" />
+
+<p>It is similar to 3Sum. How about convert it to 3Sum?</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; fourSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        List&lt;List&lt;Integer&gt;&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span>(nums.length &lt; <span class="number">4</span> || nums == <span class="keyword">null</span>) <span class="keyword">return</span> res;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; nums.length - <span class="number">3</span>;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i != <span class="number">0</span> &amp;&amp; nums[i] == nums[i - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">            <span class="keyword">int</span> target1 = target - nums[i];</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>;j &lt; nums.length - <span class="number">2</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(j != i + <span class="number">1</span> &amp;&amp; nums[j] == nums[j - <span class="number">1</span>]) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="keyword">int</span> left = j + <span class="number">1</span>, right = nums.length - <span class="number">1</span>;</span><br><span class="line">                <span class="comment">//int target2 = target1 - nums[j];</span></span><br><span class="line">                <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">                    <span class="keyword">if</span>( nums[left] + nums[right] + nums[j] == target1)&#123;</span><br><span class="line">                        res.add(Arrays.asList(<span class="keyword">new</span> Integer[]&#123;nums[i],nums[j],nums[left],nums[right]&#125;));</span><br><span class="line">                        <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[left] == nums[left + <span class="number">1</span>]) left++;</span><br><span class="line">                        <span class="keyword">while</span>(left &lt; right &amp;&amp; nums[right] == nums[right - <span class="number">1</span>]) right--;</span><br><span class="line">                        left++;  <span class="comment">//指针不要忘记移动</span></span><br><span class="line">                        right--;</span><br><span class="line">                    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(nums[left] + nums[right] + nums[j] &lt; target1)&#123;</span><br><span class="line">                        left++;</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        right--;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里可以把4转换为3，3再转为2，或者不转2也可以。</p>
+<h2>#35 Search Insert Position</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9awwzahglj30v60u0gox.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">searchInsert</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums.length == <span class="number">0</span> || nums == <span class="keyword">null</span>) <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[<span class="number">0</span>] &gt; target) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i&lt; nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i] == target)</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(nums[i] &gt; target)&#123;</span><br><span class="line">                <span class="keyword">return</span> i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums.length;</span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>简单题，有时别想太多。快速地通过的方法就是好方法。既然第一个元素不太好在循环里判断，那就单拎出来讨论。</p>
+<h2>#48 Rotate Image</h2>
+
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9axf13de6j30xf0u077w.jpg" style="zoom:33%;" /><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9axf62szaj30yu0kcdhg.jpg" alt=""></p>
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9axfp6qlyj30yu0kcdhg.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = matrix.length;</span><br><span class="line">        <span class="keyword">if</span>(n &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n / <span class="number">2</span>;j++)&#123;<span class="comment">//因为是矩阵所以n/2就可以达到全部转换</span></span><br><span class="line">                <span class="keyword">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[i][n - <span class="number">1</span> - j];</span><br><span class="line">                matrix[i][n - <span class="number">1</span> - j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n - <span class="number">1</span> - i;j++)&#123;<span class="comment">//对角线：n-1-i</span></span><br><span class="line">                <span class="keyword">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n - <span class="number">1</span> - j][n - <span class="number">1</span>- i];<span class="comment">//注意对角线翻折的坐标</span></span><br><span class="line">                matrix[n - <span class="number">1</span> - j][n - <span class="number">1</span> - i] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这题的关键在于怎么处理旋转的元素前后之间的关系。我开始总想一步到位，感觉这旋转前后的关系很简单，但是就是不好表示。看了网上的答案才发现，经过两次简单的变换就可以。但是，这很难想啊！第一次每一行倒置，第二次沿对角线翻折。</p>
+<p><img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9aztp0013j30dk04ajro.jpg" alt=""></p>
+<p><font color="#f00000">巧妙的方法还是要多积累啊！</font></p>
+<h2>#53 Maximum Subarray ???</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9azzqbgsej30yq0jwwhg.jpg" style="zoom:33%;" />
+
+<p>这题虽然是简单题，但是却有很多很好的方法可以解决。</p>
+<p><font color="#f00000">1: 动态规划</font></p>
+<p>首先定一个变量，和为0，Max则为int 型最小值。方便后面的更新。</p>
+<p>从第一个元素开始，一个一个把元素加到和上，如果和为负数，后面再加任何数一定没有后面那个元素的自身大。所以这个时候，我们应该先把和重新置为0。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>, max = Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n : nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sum &lt; <span class="number">0</span>) sum = <span class="number">0</span>;</span><br><span class="line">            sum += n;</span><br><span class="line">            <span class="keyword">if</span>(max &lt; sum) max = sum;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color="#f00000">2: 直观好理解的方法</font></p>
+<p>第二种方法与动态规划比起来要好理解一点,循环遍历，只要当前的和加元素比元素独自本身大，就累积。否则将变量置为当前元素。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">int</span> sum = <span class="number">0</span>, max = Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> n : nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(sum + n &gt; n) sum += n;</span><br><span class="line">            <span class="keyword">else</span> sum = n;</span><br><span class="line">            <span class="keyword">if</span>(max &lt; sum) max = sum;</span><br><span class="line">        &#125;</span><br><span class="line">     <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><font color="#f00000">3:分治法</font></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>[] nums)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) <span class="keyword">return</span> Integer.MIN_VALUE;</span><br><span class="line">        <span class="keyword">return</span> find(nums, <span class="number">0</span>, nums.length - <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span>[] nums,<span class="keyword">int</span> start,<span class="keyword">int</span> end)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(start == end) <span class="keyword">return</span> nums[start];</span><br><span class="line">        <span class="keyword">if</span>(start &gt; end) <span class="keyword">return</span> Integer.MIN_VALUE;   <span class="comment">//越界</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> result;</span><br><span class="line">        <span class="keyword">int</span> left_max = <span class="number">0</span>, right_max = <span class="number">0</span>, middle_left = <span class="number">0</span>, middle_right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> middle = (start + end) / <span class="number">2</span>;</span><br><span class="line">        </span><br><span class="line">        left_max = find(nums, start, middle-<span class="number">1</span>);</span><br><span class="line">        right_max = find(nums, middle+<span class="number">1</span>, end);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=middle-<span class="number">1</span>, sum = <span class="number">0</span>;i &gt;= start;i--)&#123;</span><br><span class="line">            sum += nums[i];   </span><br><span class="line">            <span class="keyword">if</span>(middle_left &lt; sum) middle_left = sum;<span class="comment">//middle_left为中间向左最大值</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=middle+<span class="number">1</span>, sum = <span class="number">0</span>;i &lt;= end;i++)&#123;</span><br><span class="line">            sum += nums[i];</span><br><span class="line">            <span class="keyword">if</span>(middle_right &lt; sum) middle_right = sum;<span class="comment">//middle_right为中间向右最大值</span></span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(left_max &gt; right_max) &#123;</span><br><span class="line">            result = left_max;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            result  = right_max;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(result &lt; (middle_left + middle_right + nums[middle]))</span><br><span class="line">            result = middle_left + middle_right + nums[middle];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> result; </span><br><span class="line">    &#125;  </span><br><span class="line">        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>先找左半部分最大值，再找右半部分最大值。然后这两个值与跨越中间点的值进行比较。</p>
+<p>有点没明白。。。递归真是我的烦恼。</p>
+<p>从middle-1往前滚，不断累加，最后一定能得到一个最大的和。右边同理。将向左的最大和 + 向右的最大和 + 中间值，与递归得到的左半部分最大和右半部分最大比较。</p>
+<h2>#66 Plus One</h2>
+
+<img src="https://tva1.sinaimg.cn/large/006y8mN6gy1g9bdadlpevj30yq0pagp9.jpg" style="zoom:33%;" />
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] plusOne(<span class="keyword">int</span>[] digits) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = digits.length - <span class="number">1</span>;i &gt;= <span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(digits[i] &lt; <span class="number">9</span>)&#123;</span><br><span class="line">                digits[i]++;</span><br><span class="line">                <span class="keyword">return</span> digits;</span><br><span class="line">            &#125;<span class="keyword">else</span> digits[i] = <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[digits.length + <span class="number">1</span>];</span><br><span class="line">        res[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这题其实还挺巧妙的，在一个循环里，遇到第一个&lt;9的，给它加上并return。如果一直没有遇到说明什么呢？是999这样的，那就创建一个比原来长度大1的数组，并将第一位置为1。原来数组默认的数组是0哦，我才知道。</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/klugjo/hexo-theme-clean-blog" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2019 yezhi miao<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>
