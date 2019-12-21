@@ -16,8 +16,7 @@
         <meta name="description" content="#257 Binary Tree Paths
 
 
-
-1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *  "/>
+1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *   "/>
     
 
     <!--Author-->
@@ -27,7 +26,7 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="leetcode-Tree-1"/>
+        <meta property="og:title" content="LeetCode Tree(1)"/>
     
 
     <!--Open Graph Description-->
@@ -35,8 +34,7 @@
         <meta property="og:description" content="#257 Binary Tree Paths
 
 
-
-1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *  "/>
+1234567891011121314151617181920212223242526272829/** * Definition for a binary tree node. * public class TreeNode &amp;#123; *   "/>
     
 
     <!--Open Graph Site Name-->
@@ -63,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>leetcode-Tree-1 - Yezhi Miao</title>
+    <title>LeetCode Tree(1) - Yezhi Miao</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -173,7 +171,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>leetcode-Tree-1</h1>
+                    <h1>LeetCode Tree(1)</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
@@ -216,7 +214,6 @@
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <h4>#257 Binary Tree Paths</h4>
-
 <img src="https://tva1.sinaimg.cn/large/006tNbRwgy1g9res5ij2tj30xw0og40n.jpg" style="zoom:33%;" />
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">binaryTreePaths</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        dfs(root, list, <span class="string">""</span>);</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode node, List&lt;String&gt; list, String s)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (node  == <span class="keyword">null</span>) <span class="keyword">return</span>;</span><br><span class="line">        s += Integer.toString(node.val);</span><br><span class="line">        <span class="keyword">if</span> (node.left != <span class="keyword">null</span> || node.right != <span class="keyword">null</span>)&#123;</span><br><span class="line">            s += <span class="string">"-&gt;"</span>;</span><br><span class="line">            dfs (node.left, list, s);</span><br><span class="line">            dfs (node.right, list, s);</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            list.add(s);</span><br><span class="line">        &#125;</span><br><span class="line">   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
